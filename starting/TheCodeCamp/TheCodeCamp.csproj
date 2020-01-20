@@ -192,6 +192,10 @@
       <DependentUpon>201901030630577_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Models\CampModel.cs" />
+    <Compile Include="Data\Models\SpeakerModel.cs" />
+    <Compile Include="Data\Models\TalkModel.cs" />
+    <Compile Include="Data\SpeakerMappingProfile.cs" />
+    <Compile Include="Data\TalkMappingProfile.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

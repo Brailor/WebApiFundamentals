@@ -31,6 +31,8 @@ namespace TheCodeCamp
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile(new CampMappingProfile());
+                cfg.AddProfile(new TalkMappingProfile());
+                cfg.AddProfile(new SpeakerMappingProfile());
             });
             bldr.RegisterInstance(config.CreateMapper()).As<IMapper>().SingleInstance();
             bldr.RegisterType<CampContext>()

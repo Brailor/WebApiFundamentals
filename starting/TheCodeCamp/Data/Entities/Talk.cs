@@ -1,4 +1,4 @@
-﻿namespace TheCodeCamp.Data
+﻿namespace TheCodeCamp.Data.Entities
 {
   public class Talk
   {

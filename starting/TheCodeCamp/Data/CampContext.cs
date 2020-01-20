@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheCodeCamp.Data.Entities;
 using TheCodeCamp.Migrations;
 
 namespace TheCodeCamp.Data

@@ -5,8 +5,9 @@ namespace TheCodeCamp.Migrations
   using System.Data.Entity.Migrations;
   using System.Linq;
   using TheCodeCamp.Data;
+    using TheCodeCamp.Data.Entities;
 
-  internal sealed class Configuration : DbMigrationsConfiguration<TheCodeCamp.Data.CampContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<TheCodeCamp.Data.CampContext>
   {
     public Configuration()
     {

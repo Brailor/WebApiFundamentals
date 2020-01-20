@@ -8,11 +8,11 @@ using TheCodeCamp.Data.Models;
 
 namespace TheCodeCamp.Data
 {
-    public class CampMappingProfile : Profile
+    public class TalkMappingProfile : Profile
     {
-        public CampMappingProfile()
+        public TalkMappingProfile()
         {
-            CreateMap<Camp, CampModel>().ForMember(c => c.Venue, opt => opt.MapFrom(m => m.Location.VenueName));
+            CreateMap<Talk, TalkModel>();
         }
     }
 }

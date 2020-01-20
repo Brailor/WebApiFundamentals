@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace TheCodeCamp.Data
+namespace TheCodeCamp.Data.Entities
 {
   public class Camp
   {
