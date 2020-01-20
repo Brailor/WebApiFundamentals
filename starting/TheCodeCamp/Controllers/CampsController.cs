@@ -21,7 +21,7 @@ namespace TheCodeCamp.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-
+        [HttpGet]
         [Route()]
         public async Task<IHttpActionResult> Get(bool includeTalks = false)
         {
@@ -43,6 +43,7 @@ namespace TheCodeCamp.Controllers
 
         }
 
+        [HttpGet]
         [Route("{moniker}")]
         public async Task<IHttpActionResult> Get(string moniker, bool includeTalks = false)
         {
@@ -56,6 +57,23 @@ namespace TheCodeCamp.Controllers
             }
             catch (Exception ex)
             {
+                return InternalServerError(ex);
+            }
+        }
+
+        [HttpGet]
+        [Route("searchByDate/{eventDate:datetime}")]
+        public async Task<IHttpActionResult> SearchByEventDate(DateTime eventDate, bool includeTalks = false)
+        {
+            try
+            {
+                var result = await _repository.GetAllCampsByEventDate(eventDate, includeTalks);
+
+                return Ok(_mapper.Map<CampModel[]>(result));
+            }
+            catch (Exception ex)
+            {
+
                 return InternalServerError(ex);
             }
         }
